@@ -1,0 +1,55 @@
+
+
+<div id="transactionHistory" class="panel">
+  <header class="header">
+    <div class="icon">
+      <img src="./assets/image/icons/briefcase.png" alt="briefcase">
+    </div>
+    <div class="heading text-center">
+      <h3>Recent Transactions</h3>
+    </div>
+  </header>
+  <div class="body">
+    <!-- START: sorting -->
+    <div class="sort-wrapper row">
+      <div class="col-lg-5">
+        <form [formGroup]="searchForm" id="searchForm">
+            <input formControlName="searchInput" type="text" id="search" placeholder="Search by typing" >
+            <div id="closeButton" (click)="clearSearch()" *ngIf="searchForm.value.searchInput">x</div>
+        </form>
+      </div>
+      <div class="col-lg-7 text-right sort">
+        <span class="sortby">Sort by</span>
+        <div id="sortButtons" class="btn-group" role="group" aria-label="Basic example">
+          <button class="btn btn-light" type="button" (click)="sortBy('date')">
+            DATE
+            <div *ngIf="activeButton == 'date'" class="triangle {{orderType == 'asc' ? 'down' : 'up'}}"></div>
+          </button>
+          <button type="button" class="btn btn-light"  (click)="sortBy('beneficiary')">
+            BENEFICIARY
+            <div *ngIf="activeButton == 'beneficiary'" class="triangle {{orderType == 'asc' ? 'down' : 'up'}}"></div>
+          </button>
+          <button type="button" class="btn btn-light"  (click)="sortBy('amount')">
+            AMOUNT
+            <div *ngIf="activeButton == 'amount'" class="triangle {{orderType == 'asc' ? 'down' : 'up'}}"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- END : sorting -->
+    <!-- list-items -->
+    <ul class="transactionHistory-wrapper list-group">
+      <div *ngIf="filteredTransactions.length > 0">
+          <app-list-item *ngFor="let item of filteredTransactions" [item]='item'>
+            </app-list-item>
+      </div>
+      <div *ngIf="filteredTransactions.length == 0">
+          <app-list-item *ngFor="let item of transactions" [item]='item'>
+            </app-list-item>
+      </div>
+      
+    </ul>
+  </div>
+
+</div>
+

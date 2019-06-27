@@ -1,0 +1,82 @@
+
+.transactionHistory-wrapper{
+    height: 680px;
+    overflow: auto;
+}
+
+#search{
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    font-weight: 100;
+}
+
+span.sortby{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+#sortButtons{
+    margin-left: 12px;
+    @media(max-width:375px){
+        display: block;
+    }
+    button{
+        border: 1px solid #adadad;
+        border-radius: 0;
+        background-color: #fff;
+        color: #5d5d5d;
+        padding: 0 24px;
+        position: relative;
+        @media(max-width:425px) {
+            padding: 0 12px;
+        }
+        @media(max-width:375px){
+           width:100%;
+        }
+    }
+}
+
+.sort{
+    @media (max-width: 991px){
+        margin-top: 18px;
+    }
+}
+
+#searchForm{
+    position: relative;
+    #closeButton{
+        position: absolute;
+        top: -4px;
+        right: 0;
+        font-size: 20px;
+    }
+}
+
+.sort-wrapper{
+    padding-bottom: 18px;
+}
+
+
+.triangle{
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    &.up{
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #b1b1b1;;
+    }
+    &.down{
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #b1b1b1;;
+    }
+    @media(max-width:425px) {
+        display: none;
+    } 
+}

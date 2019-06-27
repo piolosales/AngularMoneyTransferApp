@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+html body{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+}
+
+h1,h2,h3,h4,h5{
+    margin:0 !important;
+}
+
+.icon{
+    position: relative;
+    img{
+        position: absolute;
+        left: 13px;
+        top: 5px;
+    }
+}
+
+.heading{
+    padding: 6px;
+}
+
+.panel{
+    margin: 12px 0 ;
+    box-shadow: 0px 0px 6px 0px #717171;
+    .header{
+        background-color: #0e8396;
+        color:#fff;
+        margin: 0;
+        padding:6px 0;
+        h4,h3{
+            font-weight: 400;
+            font-size: 18px;
+        }
+        @media(max-width:1024px) and (min-width:768px){
+            .icon{
+                display: none;
+            }
+        }
+    }
+    .body{
+        background-color: #fff;
+        padding: 18px;  
+        font-size: 14px;  
+        label{
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}
+
+.submit{
+    padding-top:24px;
+    button{
+        background-color: #ef7044;
+        width: 80%;
+        border-color: #e2692f;        
+    }
+}

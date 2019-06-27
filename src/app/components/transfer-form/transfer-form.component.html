@@ -1,0 +1,33 @@
+<aside id="transferForm" class="panel">
+  <header class="header">
+    <div class="icon">
+      <img src="./assets/image/icons/arrows.png" alt="arrows">
+    </div>
+    <div class="heading text-center">
+      <h4>Make a Transfer</h4>
+    </div>
+  </header>
+  <div class="body">
+    <form [formGroup]="transferForm">
+      <div class="formControl">
+        <label for="fromAccount">From Account</label>
+        <input type="text" name="fromAccount" id="fromAccount" formControlName="fromAccount" disabled> 
+        <div id="balance">- {{balance}}</div> 
+      </div>
+      <div class="formControl">
+        <label for="toAccount">To Account</label>
+        <input type="text" name="toAccount" id="toAccount" formControlName="toAccount">
+      </div>
+      <div class="formControl amount">
+        <label for="amount">Amount</label>
+        <input type="text" name="amount" id="amount" formControlName="amount">
+        <div class="dollar" *ngIf="transferForm.value.amount">$</div>
+      </div>
+      <div class="text-right submit">
+        <button class="btn btn-primary" (click)="submit()">SUBMIT</button>
+      </div>
+    </form>
+  </div>
+
+
+</aside>

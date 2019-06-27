@@ -1,0 +1,40 @@
+.merchantLogo{
+    text-align: center;
+    @media (max-width:425px) {
+        text-align: left;
+    }
+    img{
+        width:42px;
+        height: auto;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+    }
+   
+}
+
+
+.list-group-item{
+    border-radius: 0;
+}
+
+.amount{
+    font-weight: 600;
+    font-size: 16px;
+}
+.merchant{
+    p{
+        font-weight: 500;
+        margin-bottom: 0px;
+    }
+   
+}
+
+@media(max-width:425px){
+    .left{
+        text-align: left;
+    }
+
+    .right{
+        text-align: right;
+    }
+}

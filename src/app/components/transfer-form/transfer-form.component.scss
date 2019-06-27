@@ -1,0 +1,51 @@
+input{
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+
+.formControl{
+    label{
+        display: block;
+        margin:0;
+        text-transform: uppercase;
+    }
+    input{
+        width:100%;
+        color:#999693;
+    }
+}
+.submit{
+    padding-top:24px;
+    button{
+        background-color: #ef7044;
+        width: 80%;
+        border-color: #e2692f;
+    }
+}
+#balance{
+    position: absolute;
+    top: 19px;
+    right: 0;
+    color: #999693;
+    @media (max-width:1199px) and (min-width:992px) {
+        top:1px;
+    }
+    @media(max-width:991px) and (min-width:768px){
+        display: none;
+    }
+}
+
+.formControl{
+    margin-bottom: 14px;
+    position: relative;
+    input#amount{
+        padding-left:12px;
+    }
+    .dollar{
+        position: absolute;
+        top: 1.356em;
+        color:#999693;
+
+    }
+}

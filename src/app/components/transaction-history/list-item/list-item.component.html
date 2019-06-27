@@ -1,0 +1,28 @@
+<li class="list-group-item" [style.border-left]="'10px solid '+item.categoryCode">
+  <div class="row">
+    <div class="col col-md-4 left">
+      <div class="row">
+          <div class="col-md-5">{{item.transactionDate | dateTransform}}</div>
+          <div class="col-md-7 merchantLogo text-left">
+            <img [src]="item.merchantLogo" alt="{{item.merchant}}">
+          </div>
+      </div>
+      
+    </div>
+    <div class="col col-md-8 right">
+      <div class="row">
+          <div class="col-md-6 col merchant">
+              <p>{{item.merchant}}</p>
+              <span>{{item.transactionType}}</span>
+            </div>
+            <div class="col-md-6 text-right">
+              <p class="amount">- ${{item.amount}}</p>
+            </div>
+      </div>
+     
+    </div>
+
+  </div>
+
+
+</li>

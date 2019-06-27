@@ -1,0 +1,64 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <router-outlet></router-outlet> -->
+
+<header id="main-header">
+  <!-- TODO
+  logo goes here -->
+  <div class="container">
+      <img src="./assets/image/logo.jpg" class="img-fluid" alt="logo">
+  </div>
+</header>
+<div id="main-body">
+    <div class="container" >
+        <!-- TODO:
+        2 columns -->
+        <div class="row">
+            <!-- aside here -->
+          <div class="col-md-3">
+              <app-transfer-form></app-transfer-form>
+          </div>
+          <div class="col-md-9">
+              <app-transaction-history></app-transaction-history>
+      
+          </div>
+            <!-- transaction history here -->
+        </div>
+       
+      
+      </div>
+</div>
+
+
+<div id="myModal" class="myModal {{openModal ? 'open' : 'hide'}}">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="text-right">
+          <span class="close" (click)="closeModal()">&times;</span>
+
+      </div>
+      <!-- <header>Transfer Confirmation</header> -->
+      <p> Please check all the details below.</p>
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">From Account</th>
+              <th scope="col">To Account</th>
+              <th scope="col">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{transactionObject?.fromAccount}}</td>
+              <td>{{transactionObject?.toAccount}}</td>
+              <td>{{transactionObject?.amount}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-right submit">
+          <button class="btn btn-primary" (click)="approveTransaction()">Transfer</button>
+        </div>
+    </div>
+  
+  </div>
+
